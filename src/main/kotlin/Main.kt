@@ -6,12 +6,14 @@ fun main(){
     if(formatedInput!=null){
         val isEven=formatedInput%2==0;
 
-        if(isEven){
-            print("$formatedInput isEven")
+        val output= if(formatedInput%2==0){
+            "isEven"
         }
         else{
-            println("$formatedInput is Odd")
+            "is Odd"
         }
+
+        println(output)
     }
     else{
         println("Null value is not valid")

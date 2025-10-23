@@ -1,26 +1,16 @@
 fun main(){
 
- val input=readln()
-    val formatedInput=try{
-        input.toInt()
-    } catch(e:NumberFormatException){
-        0
-    }
+     val favNumbers=intArrayOf(13,62,37,94,95);
+    println("enter number to search");
+     var input=readln();
 
+       val search=input.toIntOrNull();
 
-
-
-
-      val output=  when(formatedInput){
-
-       3->"number is three"
-          5->"number is  five"
-          in 10.. 20 ->"between 10 and 20"
-          else->"I am confussed what to print"
-
-        }
-
-        println(output)
+   if(search!=null && search in 0..favNumbers.size){
+       println("number at position $search is ${favNumbers[search]}");
+   } else{
+        println("That fucking index not valid")
+   }
 
 
 

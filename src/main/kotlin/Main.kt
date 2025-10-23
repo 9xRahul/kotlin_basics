@@ -1,17 +1,22 @@
 fun main(){
+ println("Enter the limit")
+  val limit= readln().toIntOrNull()?:0
 
-     val favNumbers=intArrayOf(13,62,37,94,95);
-    println("enter number to search");
-     var input=readln();
+    var i=0
+    var sum=0
+    var nums=mutableListOf<int>();
 
-       val search=input.toIntOrNull();
 
-   if(search!=null && search in 0..favNumbers.size){
-       println("number at position $search is ${favNumbers[search]}");
-   } else{
-        println("That fucking index not valid")
-   }
+    while(i<limit){
+        println("Enter ${i+1}th number")
+        val num=readln().toIntOrNull()?:continue
+        nums+=num
 
+        i++
+    }
+
+
+    println(nums.contentToString())
 
 
 }

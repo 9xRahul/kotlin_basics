@@ -4,19 +4,21 @@ fun main(){
 
     var i=0
     var sum=0
-    var nums=mutableListOf<int>();
+    var nums=mutableListOf<Int>();
 
-
-    while(i<limit){
+    for(i in 0 until limit){
         println("Enter ${i+1}th number")
         val num=readln().toIntOrNull()?:continue
-        nums+=num
-
-        i++
+        nums.add(num);
     }
 
 
-    println(nums.contentToString())
+  for( number in nums){
+      println("$number")
+  }
+
+
+
 
 
 }

@@ -2,7 +2,12 @@ fun main(){
  println("Enter the a string")
   val str= readln();
 
-println(reverseString(str))
+if(reverseString(str= str)==str){
+    println(" $str is Palinrome String")
+}
+    else{
+        println(" $str Not a palinrome String ")
+    }
 
 }
 

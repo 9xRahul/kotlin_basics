@@ -2,13 +2,21 @@ fun main(){
  println("Enter the a string")
   val str= readln();
 
-    val finalStr= buildString {  for(i in str.lastIndex downTo 0){
-         append(str[i])
-    } }
+reverseString(str)
+
+}
+
+
+fun reverseString(str: String){
 
 
 
+    val rev= buildString {
+        for (i in str.lastIndex downTo  0){
+           append(str[i])
+        }
+    }
 
- print(finalStr)
+    print(rev)
 
 }

@@ -2,12 +2,12 @@ fun main(){
  println("Enter the a string")
   val str= readln();
 
-reverseString(str)
+println(reverseString(str))
 
 }
 
 
-fun reverseString(str: String){
+fun reverseString(str: String) : String{
 
 
 
@@ -17,6 +17,6 @@ fun reverseString(str: String){
         }
     }
 
-    print(rev)
+ return rev
 
 }

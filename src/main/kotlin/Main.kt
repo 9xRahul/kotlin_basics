@@ -2,7 +2,7 @@ fun main(){
  println("Enter the a string")
   val str= readln();
 
-if(reverseString(str= str)==str){
+if(str.reverseString()==str){
     println(" $str is Palinrome String")
 }
     else{
@@ -12,13 +12,13 @@ if(reverseString(str= str)==str){
 }
 
 
-fun reverseString(str: String) : String{
+fun String.reverseString() : String{
 
 
 
     val rev= buildString {
-        for (i in str.lastIndex downTo  0){
-           append(str[i])
+        for (i in this@reverseString.lastIndex downTo  0){
+           append(this@reverseString[i])
         }
     }
 

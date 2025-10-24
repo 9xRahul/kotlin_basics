@@ -1,6 +1,7 @@
 fun main(){
  println("Enter the a string")
-  val str= readln();
+  val str= readln().toInt();
+
 
 if(str.reverseString()==str){
     println(" $str is Palinrome String")
@@ -24,4 +25,8 @@ fun String.reverseString() : String{
 
  return rev
 
+}
+
+fun Int.reverseString():Int{
+     return this.toString().reverseString().toInt()
 }

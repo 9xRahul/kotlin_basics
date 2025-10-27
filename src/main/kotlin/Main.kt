@@ -1,27 +1,19 @@
+import kotlin.math.sqrt
+
 fun main() {
-    println("Enter the a string")
-    val str = readln()
 
-    val greet = { name: String -> println("Hello, $name!") }
+    val rect1=Rectangle(12,12)
 
-    println(greet( str))
-
-    val output=str.myFilter { it.isLetter() }
-
-
- println(output)
+    println(rect1.perimeter)
 
 }
 
 
-fun String.myFilter(predicate:(Char)->Boolean):String{
 
-    return buildString {
-        for(char in this@myFilter){
-            if(predicate(char)){
-                append(char)
-            }
-        }
-    }
+class Rectangle(val width: Int, val height: Int) {
+
+
+    val perimeter =4*(width*height)
+
 
 }

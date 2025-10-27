@@ -1,32 +1,27 @@
-fun main(){
- println("Enter the a string")
-  val str= readln().toInt();
+fun main() {
+    println("Enter the a string")
+    val str = readln()
+
+    val greet = { name: String -> println("Hello, $name!") }
+
+    println(greet( str))
+
+    val output=str.myFilter { it.isLetter() }
 
 
-if(str.reverseString()==str){
-    println(" $str is Palinrome String")
+ println(output)
+
 }
-    else{
-        println(" $str Not a palinrome String ")
-    }
-
-}
 
 
-fun String.reverseString() : String{
+fun String.myFilter(predicate:(Char)->Boolean):String{
 
-
-
-    val rev= buildString {
-        for (i in this@reverseString.lastIndex downTo  0){
-           append(this@reverseString[i])
+    return buildString {
+        for(char in this@myFilter){
+            if(predicate(char)){
+                append(char)
+            }
         }
     }
 
- return rev
-
-}
-
-fun Int.reverseString():Int{
-     return this.toString().reverseString().toInt()
 }

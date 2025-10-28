@@ -17,6 +17,10 @@ fun main() {
     println(sumAreas(rect1, circle))
 
 
+    rect1.inc()
+    rect2.inc()
+    println( "rect 1 ${rect1.counter} rect 2 ${rect2.counter} ");
+
 
 }
 
@@ -31,7 +35,7 @@ fun maxPerimeter( rect1:Rectangle,rect2:Rectangle):Rectangle{
 
 data class Rectangle(val name:String, val width: Float, val height: Float,
 
-):Shape {
+):Shape() {
 
 
 
@@ -50,7 +54,7 @@ fun sumAreas(vararg shapes: Shape): Double{
 }
 
 
-data class Circle(val radius:Float):Shape{
+data class Circle(val radius:Float):Shape (){
 
     override val area: Float
         get() = 2 * PI.toFloat() * radius * radius;
@@ -58,7 +62,19 @@ data class Circle(val radius:Float):Shape{
         get() = 2 * PI.toFloat() * radius
 }
 
-interface  Shape{
+interface  Shapes{
     val area:Float
     val circumference:Float
+}
+
+
+abstract  class Shape{
+
+    var counter=0
+    abstract val area:Float
+    abstract val circumference:Float
+
+    fun inc(){
+        counter++
+    }
 }

@@ -29,16 +29,33 @@ fun describeAnimal(animal: Animal): String {
 
 // Step 4: Main function to test it all
 fun main() {
-    val animals: List<Animal> = listOf(
-        Dog(name = "Buddy", breed = "Labrador"),
-        Cat(name = "Misty", color = "White"),
-        Bird(name = "Tweety", canFly = true),
-        Bird(name = "Pengu", canFly = false),
-        Fish
-    )
+//    val animals: List<Animal> = listOf(
+//        Dog(name = "Buddy", breed = "Labrador"),
+//        Cat(name = "Misty", color = "White"),
+//        Bird(name = "Tweety", canFly = true),
+//        Bird(name = "Pengu", canFly = false),
+//        Fish
+//    )
+//
+//    // Print details for each animal
+//    for (animal in animals) {
+//        println(describeAnimal(animal))
+//    }
 
-    // Print details for each animal
-    for (animal in animals) {
-        println(describeAnimal(animal))
+    println(" ${greetMe(Country.INDIA)} From ${Country.INDIA}")
+}
+
+
+enum class Country{
+    GERMANY,INDIA,UK,USA
+}
+
+fun  greetMe(country:Country):String{
+    return when(country){
+        Country.GERMANY -> "Guten tag"
+        Country.INDIA -> "Namaste"
+        Country.UK -> "Hii"
+        Country.USA -> "HEllo"
     }
+
 }
